@@ -4,11 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 @Data
 @AllArgsConstructor
+@Table(name = "tb_doadores")
 public class Doador {
 
     @Id
@@ -18,18 +18,23 @@ public class Doador {
     private String nome;
     private String cpf;
     private String rg;
-    private LocalDate data_nasc;
     private String sexo;
-    private String nome_mae;
-    private String nome_pai;
-
+    private String mae;
+    private String pai;
+    private String cep;
+    private String endereco;
+    private Integer numero;
+    private String bairro;
+    private String cidade;
+    private String estado;
     private String email;
-    private String tel_fixo;
+    private String telefone_fixo;
     private String celular;
     private Float altura;
     private Float peso;
     private String tipo_sanguineo;
+    private String data_nasc;
 
-    @Embedded
-    private Endereco endereco;
+    public Doador() {}
+
 }

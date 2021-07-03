@@ -15,11 +15,15 @@ public class DoadorService {
         this.doadorRepository = doadorRepository;
     }
 
-    public List<Doador> findAll(){
+    public Iterable<Doador> findAll(){
         return doadorRepository.findAll();
     }
 
     public Doador save(Doador doador){
         return doadorRepository.save(doador);
+    }
+
+    public Iterable<Doador> saveAll(List<Doador> doadores){
+        return doadorRepository.saveAll(doadores);
     }
 }

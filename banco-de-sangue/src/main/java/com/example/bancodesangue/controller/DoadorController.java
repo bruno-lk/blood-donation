@@ -18,8 +18,8 @@ public class DoadorController {
         this.doadorService = doadorService;
     }
 
-    @GetMapping
-    public List<Doador> findAll(){
+    @GetMapping("/lista")
+    public Iterable<Doador> findAll(){
             return doadorService.findAll();
     }
 }
